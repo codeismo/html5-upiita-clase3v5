@@ -4,17 +4,47 @@
         <meta charset="UTF-8"/>
         <script>
 			//funcion
-
-			//llamo a la funcion
-			//var numero = saludar("Daniela");
+			//los parametros no usan var
+			//los parametros y el return son opcionales
+			function saludar ( nombre ) {
+			 	document.write("Buenos días" + nombre);
+			 	return 0;
+			}
+			
+			var numero = saludar("Daniela");		
 
 			//funcion anonima (lamdas) sumar y multiplicar
+			var sumar = function(a, b){
+				var r = a + b;
+				document.write("<p>suma " + r + "</p>");
+			};
 			
+			var multiplicar = function(a, b){
+				var r = a * b;
+				document.write("<p>multiplicacion "+ r + "</p>");
+			};
 
+			//sumar(3,4);
+			//multiplicar(3,4);
 			//una funcion como argumento operacion
+			var operacion = function( unaFuncion , a, b ){
+				unaFuncion(a, b);
+			};
+			
+			var numero1 = 5;
+			var numero2 = 8;
+			operacion(sumar, numero1, numero2);
+			
+			operacion( function(a, b){
+				var r = a + b;
+				document.write("<p>suma " + r + "</p>");
+			},
+			6, 3 );
+			
 			//sepuede definir ahi mismo
 			//una funcion dentro de una funcion  closures
 
+			
 			//CLOSURE - autoejecutables			
 
         </script>
