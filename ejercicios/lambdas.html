@@ -4,7 +4,22 @@
         <meta charset="UTF-8" />
         <title>Lambdas</title>
         <script>
-
+		//funciones anonimas
+		var buenos_dias = function(){
+			alert("Buenos Dias");
+		};
+		var buenas_noches =function(){
+			alert("Buenas Noches");
+		};
+		//una funcion que recibe una funcion como
+		//parametro
+		//Closure -funcion que ejecuta a otra funcion(es)
+		var saludar= function( unaFuncion ){
+			unaFuncion();
+		};
+		
+		saludar( buenos_dias );
+		
         </script>
     </head>
     <body>

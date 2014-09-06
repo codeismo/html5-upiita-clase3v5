@@ -5,7 +5,27 @@
         <script>
             //keyword Object()
             
-            //JSON                        
+            //JSON (JavaScript Object Notation) 
+            var persona = {
+            	nombre: "daniela",
+            	edad: 30,
+            	saludar: function(){
+            		alert("Hola mi nombre" + this.nombre);
+            	},
+            	despedirse:function(){
+            		alert("Adios");
+            	}
+            }; 
+            /*** Los atributos de un objeto 
+             *pueden ser otros objetos ***/
+            var programador={
+            	leguajes: "c++,java",
+            	datos_personales: persona
+            };
+            alert( programador.lenguajes );
+            //para acceder las funciones y atributos del objeto
+            persona.saludar();
+            persona.apellido = "Aguirre";                       
         </script>
     </head>
     <body></body>
